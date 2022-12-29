@@ -1,0 +1,48 @@
+.add-book-title {
+    text-align: center;
+}
+
+.add-book-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.add-book-form label {
+    padding: .5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    vertical-align: center;
+}
+
+.add-book-form input {
+    font-family: inherit;
+    padding: .5rem 1rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #373737;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.add-book-button {
+    font-family: inherit;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: .5rem;
+    border: 1px solid #373737;
+    color: 373737;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.warning {
+    color: #c0392b;
+    margin-top: 1rem;
+}

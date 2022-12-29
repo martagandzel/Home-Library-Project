@@ -1,0 +1,6 @@
+.nav-bar {
+    border-bottom: 1px solid #373737;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

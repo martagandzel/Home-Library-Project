@@ -1,0 +1,14 @@
+.authors-container {
+    columns: 4;
+    gap: 2rem;
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.all-authors-title {
+    text-align: center;
+}
+
+.authors-container h3 {
+    padding: .5rem;
+    font-weight: 400;
+}

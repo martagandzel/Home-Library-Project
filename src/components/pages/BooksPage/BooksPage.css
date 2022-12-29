@@ -1,0 +1,49 @@
+.book-page {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    gap: 2rem;
+}
+
+.book-page img {
+    padding: 2rem;
+    height: 70vh;
+}
+
+.backcover-info {
+    padding: 2rem 3rem;
+    line-height: 2rem;
+    letter-spacing: .7px;
+}
+
+.book-info {
+    padding: 2rem;
+}
+
+.book-page-title-section {
+    display: flex;
+}
+
+.book-page-button {
+    margin-left: 3rem;
+    cursor: default;
+}
+
+.book-page-title {
+    margin: 0;
+}
+
+.book-page-author p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.book-page-author span {
+    font-size: 1.3rem;
+    margin-left: .5rem;
+}
+
+p.book-page-year,
+p.book-page-cat {
+    color: #999;
+    padding-top: 0;
+}

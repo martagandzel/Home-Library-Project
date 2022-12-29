@@ -1,0 +1,25 @@
+.nav-container {
+    padding-left: 2rem;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    list-style: none;
+}
+
+.main-navigation li {
+    margin-right: 2rem;
+}
+
+.main-navigation li a {
+    text-decoration: none;
+    color: #373737;
+}
+
+.main-navigation li a:hover {
+    color: #999;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}

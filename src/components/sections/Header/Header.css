@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #373737;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #373737;
+}
+
+.app-logo {
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
