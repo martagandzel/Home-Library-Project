@@ -16,7 +16,7 @@ export const getAllAuthors = books => {
             allAuthors.push(`${book.surname}, ${book.name}`)
         }
     })
-    allAuthors.sort((a, b) => a > b ? 1 : -1)
+    const sortedAuthors = [...allAuthors].sort((a, b) => a > b ? 1 : -1)
 
-    return allAuthors
+    return sortedAuthors
 }
