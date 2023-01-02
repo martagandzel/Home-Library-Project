@@ -1,7 +1,7 @@
 const URL = 'http://localhost:8000/library'
 
 export const showLibrary = () => {
-    return fetch(URL)
+    return fetch(`${URL}?_sort=surname`)
         .then(res => res.json())
 }
 
