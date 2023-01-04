@@ -23,6 +23,9 @@ const Search = (props) => {
                 onKeyUp={handleSearch}
             >
                 <label>
+                    <span className="material-symbols-outlined">
+                        search
+                    </span>
                     <input
                         type="text"
                         placeholder="search for a title"
@@ -31,14 +34,6 @@ const Search = (props) => {
                         onChange={readSearchInput}
                     />
                 </label>
-                <button
-                    type="submit"
-                    className="search-button"
-                >
-                    <span className="material-symbols-outlined">
-                        search
-                    </span>
-                </button>
             </form>
         </section>
     );

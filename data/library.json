@@ -222,13 +222,13 @@
     },
     {
       "id": 21,
-      "title": "The Heron's Cry",
+      "title": "The Heron’s Cry",
       "surname": "Cleeves",
       "name": "Ann",
       "year": "2021",
       "category": "mystery",
       "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1623116403i/56269063.jpg",
-      "alt": "Cover for The Heron's Cry",
+      "alt": "Cover for The Heron’s Cry",
       "finished": true
     },
     {
@@ -344,7 +344,7 @@
     {
       "id": 33,
       "title": "Shadowplay",
-      "surname": "O'Connor",
+      "surname": "O’Connor",
       "name": "Joseph",
       "year": "2019",
       "category": "historical fiction",
