@@ -19,12 +19,17 @@
     vertical-align: center;
 }
 
-.add-book-form input {
+.add-book-form input,
+.add-book-form select {
     font-family: inherit;
     padding: .5rem 1rem;
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #373737;
+}
+
+.add-book-form select {
+    width: 18rem;
 }
 
 input:focus-visible {

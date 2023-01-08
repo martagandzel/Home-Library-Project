@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import SubPageTemplate from "../../templates/SubPageTemplate/SubPageTemplate";
 import './BooksPage.css'
+import SubPageTemplate from "../../templates/SubPageTemplate/SubPageTemplate";
 import { getBookById } from "../../../utils/http";
 
 const BooksPage = (props) => {

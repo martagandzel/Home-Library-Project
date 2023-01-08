@@ -2,8 +2,19 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './AddBookPage.css'
-import { addNewBook } from '../../../utils/http';
 import SubPageTemplate from '../../templates/SubPageTemplate/SubPageTemplate';
+import { addNewBook } from '../../../utils/http';
+
+const genreOptions = [
+    { id: 1, name: 'fiction' },
+    { id: 2, name: 'mystery' },
+    { id: 3, name: 'si-fi' },
+    { id: 4, name: 'historical fiction' },
+    { id: 5, name: 'fantasy' },
+    { id: 6, name: 'cooking' },
+    { id: 7, name: 'horror' },
+    { id: 8, name: 'romance' },
+]
 
 const AddBookPage = () => {
 
@@ -12,33 +23,29 @@ const AddBookPage = () => {
     const [authorFirstName, setAuthorFirtsName] = useState('')
     const [authorLastName, setAuthorLastName] = useState('')
     const [bookYear, setBookYear] = useState('')
-    const [bookGenre, setBookGenre] = useState('')
     const [bookCover, setBookCover] = useState('')
     const [isError, setIsError] = useState(false)
 
-    const navigate = useNavigate()
+    const initialGenre = genreOptions[0].name
+    const [selectedGenre, setSelectedGenre] = useState(initialGenre)
 
+    const navigate = useNavigate()
 
     const readBookTitle = event => {
         setBookTitle(event.target.value)
     }
-
     const readAuthorFirstName = event => {
         setAuthorFirtsName(event.target.value)
     }
-
     const readAuthorLastName = event => {
         setAuthorLastName(event.target.value)
     }
-
     const readBookYear = event => {
         setBookYear(event.target.value)
     }
-
-    const readBookGenre = event => {
-        setBookGenre(event.target.value)
+    const readSelectedGenre = event => {
+        setSelectedGenre(event.target.value)
     }
-
     const readBookCover = event => {
         setBookCover(event.target.value)
     }
@@ -46,9 +53,9 @@ const AddBookPage = () => {
     const handleAddNewBook = event => {
         event.preventDefault()
 
-        const isValid = bookTitle.trim().length > 1 && authorFirstName.trim().length > 1 && authorLastName.trim().length > 1 && bookYear.trim().length > 1 && bookGenre.trim().length > 1 && bookCover.trim().length > 1
+        const isValid = bookTitle.trim().length > 1 && authorFirstName.trim().length > 1 && authorLastName.trim().length > 1 && bookYear.trim().length > 1 && bookCover.trim().length > 1
 
-        setIsError(bookTitle.trim().length < 1 || authorFirstName.trim().length < 1 || authorLastName.trim().length < 1 || bookYear.trim().length < 4 || bookGenre.trim().length < 1 || bookCover.trim().length < 1)
+        setIsError(bookTitle.trim().length < 1 || authorFirstName.trim().length < 1 || authorLastName.trim().length < 1 || bookYear.trim().length < 4 || bookCover.trim().length < 1)
 
         if (!isValid) {
             return
@@ -62,7 +69,7 @@ const AddBookPage = () => {
             surname: authorLastName,
             name: authorFirstName,
             year: bookYear,
-            category: bookGenre.toLowerCase(),
+            category: selectedGenre,
             image: bookCover,
             alt: `Cover for ${bookTitle}`,
             finished: false
@@ -76,8 +83,6 @@ const AddBookPage = () => {
 
     return (
         <SubPageTemplate>
-
-
             <h2
                 className='add-book-title'
             >
@@ -121,13 +126,21 @@ const AddBookPage = () => {
                         onChange={readBookYear}
                     />
                 </label>
-                <label>Genre
-                    <input
-                        type="text"
-                        placeholder='genre'
-                        value={bookGenre}
-                        onChange={readBookGenre}
-                    />
+                <label>Choose a genre
+                    <select
+                        value={selectedGenre}
+                        onChange={readSelectedGenre}
+                    >
+
+                        {
+                            genreOptions.map(({ id, name }) => {
+                                return (
+                                    <option key={id} value={name}>{name}</option>
+                                )
+                            })
+                        }
+
+                    </select>
                 </label>
                 <label>Paste URL of book’s cover
                     <input
@@ -152,7 +165,7 @@ const AddBookPage = () => {
                     </span>
                 </button>
             </form>
-        </SubPageTemplate>
+        </SubPageTemplate >
     );
 }
 

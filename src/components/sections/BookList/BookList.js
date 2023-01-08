@@ -8,13 +8,7 @@ const BookList = (props) => {
 
     const toggleFinished = id => {
         const chosenBook = props.books.find(book => book.id === id)
-
-        if (chosenBook.finished) {
-            chosenBook.finished = false
-        } else {
-            chosenBook.finished = true
-        }
-
+        chosenBook.finished = !chosenBook.finished
         changeFinishedStatus(id, chosenBook)
         navigate('/')
     }

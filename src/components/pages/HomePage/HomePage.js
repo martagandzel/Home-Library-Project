@@ -24,24 +24,19 @@ const HomePage = () => {
             setBooks={setBooks}
         >
             <section className='main-container'>
-
                 <Aside
                     books={books}
                     setBooks={setBooks}
                     activeGenres={activeGenres}
                     setActiveGenres={setActiveGenres}
                 />
-
-
                 <BookList
                     books={books}
                     setBooks={setBooks}
                     activeGenres={activeGenres}
                     setActiveGenres={setActiveGenres}
                 />
-
             </section>
-
         </MainTemplate>
     );
 }

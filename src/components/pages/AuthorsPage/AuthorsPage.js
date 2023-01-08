@@ -17,7 +17,6 @@ const AuthorsPage = () => {
 
     return (
         <SubPageTemplate>
-
             <h2
                 className="all-authors-title"
             >
@@ -26,8 +25,6 @@ const AuthorsPage = () => {
             <section
                 className="authors-container"
             >
-
-
                 {
                     getAllAuthors(books).map(author => (
                         <section
@@ -40,7 +37,6 @@ const AuthorsPage = () => {
                     ))
                 }
             </section>
-
         </SubPageTemplate>
     );
 }

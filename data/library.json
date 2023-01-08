@@ -505,6 +505,28 @@
       "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1425317994i/8930.jpg",
       "alt": "Cover for Jamie’s Italy",
       "finished": false
+    },
+    {
+      "id": 1673201942988,
+      "title": "Memoirs of a Geisha",
+      "surname": "Golden",
+      "name": "Arthur",
+      "year": "1997",
+      "category": "historical fiction",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1409595968i/929.jpg",
+      "alt": "Cover for Memoirs of a Geisha",
+      "finished": false
+    },
+    {
+      "id": 1673203123285,
+      "title": "Black Heart",
+      "surname": "Weatherley",
+      "name": "Anna-Lou",
+      "year": "2018",
+      "category": "mystery",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1518791403i/36654559.jpg",
+      "alt": "Cover for Black Heart",
+      "finished": true
     }
   ]
 }
